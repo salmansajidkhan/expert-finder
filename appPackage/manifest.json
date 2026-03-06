@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "version": "1.0.0",
+  "id": "ddd63bb8-f2d6-4b44-8f07-3487ec21ce62",
+  "developer": {
+    "name": "Salman Khan",
+    "websiteUrl": "https://microsoft.com",
+    "privacyUrl": "https://privacy.microsoft.com",
+    "termsOfUseUrl": "https://microsoft.com/terms"
+  },
+  "name": {
+    "short": "Expert Finder",
+    "full": "Microsoft Expert Finder — Gaming Security & Anti-Cheat"
+  },
+  "description": {
+    "short": "Find internal Microsoft experts using M365 signals",
+    "full": "An AI-powered agent that searches across Microsoft 365 signals (people profiles, emails, meetings, documents) to identify the most relevant internal experts for any topic. Returns ranked recommendations with confidence scores, evidence links, and ready-to-send outreach drafts. Optimized for Gaming Security and Anti-Cheat workflows but works for any domain."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#0078D4",
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "expert-finder",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  },
+  "validDomains": []
+}
