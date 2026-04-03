@@ -7,7 +7,7 @@
 
 ## What We Built
 
-In a single session (~45 minutes), we built an **AI-powered Expert Finder agent** that searches across Microsoft 365 signals to identify internal experts for any topic. It's designed for PM workflows in Gaming Security & Anti-Cheat but works for any domain.
+In a single session (~45 minutes), we built an **AI-powered Expert Finder agent** that searches across M365 signals to identify internal experts for any topic. It's designed for PM workflows in Gaming Security & Anti-Cheat but works for any domain.
 
 **Live demo results we ran:**
 - **WNS experts** → Found 6 ranked candidates across profiles, emails, and meetings with source links
@@ -20,7 +20,7 @@ In a single session (~45 minutes), we built an **AI-powered Expert Finder agent*
 ## The Value It Brings
 
 ### For PMs
-- **Minutes instead of hours:** Finding the right expert used to mean Slack-searching, asking around, and hoping someone knows someone. This agent returns ranked, evidence-backed results in seconds.
+- **Minutes instead of hours:** Finding the right expert used to mean searching on Teams, SharePoint, asking around, and hoping someone knows someone. This agent returns ranked, evidence-backed results in seconds.
 - **Confidence you're talking to the right person:** Every recommendation includes which M365 signals contributed (profile, email, meeting, doc) and how recently the person was active.
 - **Ready-to-send outreach:** No more staring at a blank email. The agent drafts personalized messages referencing specific evidence to increase response rates.
 
@@ -41,7 +41,7 @@ We iterated the agent instructions 5 times. Each iteration changed behavior mean
 - **v4:** 3 parallel queries with conditional validation — best accuracy, acceptable speed
 - **v5 (final):** Fast single query by default + "deep search" option on demand — best of both worlds
 
-**Key insight:** Tuning an AI agent is exactly like tuning a product. You're making speed vs. accuracy tradeoffs, designing user-facing options, and iterating based on real output quality.
+**Key insight:** Tuning an AI agent is like tuning a product. You're making speed vs. accuracy tradeoffs, designing user-facing options, and iterating based on real output quality.
 
 ### 2. Multi-Signal Cross-Referencing Matters
 A single query returns surface-level results. Running focused queries per signal type (profiles, emails, meetings/docs) and cross-referencing produces dramatically richer results. We proved this by A/B testing the Armoury Crate search.
@@ -61,8 +61,8 @@ The fast-default + deep-search-on-demand pattern works for any AI agent scenario
 
 | Option | Effort | Best For |
 |--------|--------|----------|
-| **Copilot CLI + WorkIQ** (what we used today) | Zero — it's working now | Individual use |
-| **M365 Declarative Agent** (scaffolded) | Low — manifest ready to deploy | Team-wide access via Teams/Copilot |
+| **Copilot CLI + WorkIQ** (what we used today) | Zero — working | Individual use |
+| **M365 Declarative Agent** (scaffolded) | Low — working | Team-wide access via Teams/Copilot |
 | **MCP Server** | Medium-high | Universal tool access across any AI client |
 
 ---

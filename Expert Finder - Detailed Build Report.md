@@ -7,7 +7,7 @@
 ## 1. Project Overview
 
 ### Problem
-Finding the right internal Microsoft expert for a specific topic is time-consuming. PMs typically rely on tribal knowledge, Slack searches, or asking colleagues who might know someone. This doesn't scale, doesn't work for new team members, and produces inconsistent results.
+Finding the right internal Microsoft expert for a specific topic is time-consuming. PMs typically rely on tribal knowledge, Teams searches, or asking colleagues who might know someone. This doesn't scale, doesn't work for new team members, and produces inconsistent results.
 
 ### Solution
 We built an Expert Finder agent that queries Microsoft 365 data (people profiles, emails, meetings, documents) through WorkIQ to return ranked expert recommendations with confidence scores, evidence links, and ready-to-send outreach messages.
@@ -167,7 +167,7 @@ User Query
 ## 7. Known Limitations
 
 - **WorkIQ signal gaps:** Some discussions happen in Teams channels that WorkIQ may not fully index. SoundWire conversations, for example, showed minimal email activity.
-- **Name ambiguity:** Common names (e.g., "Ryan Kim") can match multiple people. The agent mitigates this with role/org context.
+- **Name ambiguity:** Common names can match multiple people. The agent mitigates this with role/org context.
 - **No caching:** Every search is fresh. Repeat queries for the same topic take the same time.
 - **Single user's M365 data:** Results are scoped to what the querying user has access to. Different users may get different results for the same query.
 
