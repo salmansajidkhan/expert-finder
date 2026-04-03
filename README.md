@@ -1,30 +1,30 @@
 # Expert Finder
 
-**AI-powered internal expert discovery agent that finds subject matter experts across 7 signal types — no code required.**
+**AI-powered internal expert discovery agent that finds subject matter experts across 7 signal types - no code required.**
 
 ---
 
 ## What Problem It Solves
 
-Finding the right expert inside a large organization is slow and unreliable. People rely on tribal knowledge, manual searches, or asking around — which doesn't scale, fails for new hires, and produces inconsistent results. Expert Finder queries live organizational data across email, meetings, documents, profiles, chat, code repositories, and meeting transcripts to return ranked expert recommendations with confidence scores, evidence links, and ready-to-send outreach messages.
+Finding the right expert inside a large organization is slow and unreliable. People rely on tribal knowledge, manual searches, or asking around - which doesn't scale, fails for new hires, and produces inconsistent results. Expert Finder queries live organizational data across email, meetings, documents, profiles, chat, code repositories, and meeting transcripts to return ranked expert recommendations with confidence scores, evidence links, and ready-to-send outreach messages.
 
 ---
 
 ## Key Features
 
-- **7 Signal Types** — People profiles, email threads, meetings, document authorship (SharePoint/OneDrive), Teams messages, DevOps activity (work items + PRs), and meeting transcript speaker attribution
-- **Dual-Mode Search** — Fast single-query default for speed; user-triggered deep search runs 6 parallel queries across all signal types for maximum coverage
-- **Confidence Scoring** — Formalized 3-tier rubric (High / Medium / Low) based on signal count, recency, and role alignment
-- **Recency Weighting** — Candidates labeled Currently Active → Recently Active → Possibly Stale → Likely Stale
-- **Auto-Generated Outreach** — Top 2 candidates always include a ready-to-send email with evidence-based personalization
-- **Source Links** — Every recommendation links back to the original email, document, meeting, or profile for verification
-- **Conditional Validation** — Org chart verification runs only when signals suggest stale data, saving unnecessary queries
+- **7 Signal Types** - People profiles, email threads, meetings, document authorship (SharePoint/OneDrive), Teams messages, DevOps activity (work items + PRs), and meeting transcript speaker attribution
+- **Dual-Mode Search** - Fast single-query default for speed; user-triggered deep search runs 6 parallel queries across all signal types for maximum coverage
+- **Confidence Scoring** - Formalized 3-tier rubric (High / Medium / Low) based on signal count, recency, and role alignment
+- **Recency Weighting** - Candidates labeled Currently Active → Recently Active → Possibly Stale → Likely Stale
+- **Auto-Generated Outreach** - Top 2 candidates always include a ready-to-send email with evidence-based personalization
+- **Source Links** - Every recommendation links back to the original email, document, meeting, or profile for verification
+- **Conditional Validation** - Org chart verification runs only when signals suggest stale data, saving unnecessary queries
 
 ---
 
 ## Architecture
 
-The agent is a **zero-code, instruction-driven system** — pure prompt engineering and platform configuration. No runtime, no backend, no deployment pipeline.
+The agent is a **zero-code, instruction-driven system** - pure prompt engineering and platform configuration. No runtime, no backend, no deployment pipeline.
 
 ```
 User Query
@@ -77,7 +77,7 @@ User Query
 └─────────────────────────┘
 
 ★ Document authorship is a strong confidence
-  booster — 3+ authored docs = high expertise signal
+  booster - 3+ authored docs = high expertise signal
 ```
 
 **How it works:** The agent receives a natural language query ("Who knows about Kubernetes security?"), constructs targeted searches against organizational data sources, cross-references results across signal types, scores candidates using a formalized rubric, and returns a ranked table with evidence and outreach drafts.
@@ -86,7 +86,7 @@ User Query
 
 ## How to Use
 
-### Option 1 — Copilot CLI + WorkIQ
+### Option 1 - Copilot CLI + WorkIQ
 
 Best for: individual use, ad-hoc expert searches with DevOps and transcript signals.
 
@@ -98,18 +98,18 @@ Best for: individual use, ad-hoc expert searches with DevOps and transcript sign
 
 DevOps signals are available when an Azure DevOps MCP server is configured. Meeting transcript signals require a local transcript store with FTS5 search.
 
-### Option 2 — M365 Declarative Agent (Teams / Copilot)
+### Option 2 - M365 Declarative Agent (Teams / Copilot)
 
 Best for: team-wide deployment, always-on access inside Teams or M365 Copilot.
 
-1. Edit `appPackage/declarativeAgent.json` — customize instructions for your domain
-2. Edit `appPackage/manifest.json` — update app name, description, and IDs
+1. Edit `appPackage/declarativeAgent.json` - customize instructions for your domain
+2. Edit `appPackage/manifest.json` - update app name, description, and IDs
 3. Package the `appPackage/` directory into a `.zip`
 4. Upload to Teams Admin Center or Copilot Studio
 5. Grant required Graph API permissions (see Configuration below)
 6. Users access the agent directly in Teams or M365 Copilot
 
-### Option 3 — Portable Skill (Any Platform)
+### Option 3 - Portable Skill (Any Platform)
 
 Copy the instructions from `skills.md` into any LLM agent that can query Microsoft Graph APIs. Replace tool-specific references with your platform's equivalents.
 
@@ -152,8 +152,8 @@ Pre-configured prompts that appear when users open the agent:
 
 - **Node.js 18+** (for DevOps MCP server and transcript store)
 - **M365 tenant** with Copilot licensing
-- **Azure DevOps** access (optional — for DevOps signals)
-- **Meeting transcript store** with FTS5 search (optional — for transcript signals)
+- **Azure DevOps** access (optional - for DevOps signals)
+- **Meeting transcript store** with FTS5 search (optional - for transcript signals)
 
 ### Graph API Permissions
 
@@ -218,7 +218,7 @@ Expert Finder/
 
 ## Status
 
-**Active — v1.0** · Both deployment modes (CLI + Declarative Agent) are live and working.
+**Active - v1.0** · Both deployment modes (CLI + Declarative Agent) are live and working.
 
 Planned: MCP Server packaging to expose Expert Finder as a reusable tool for any MCP-compatible client.
 
